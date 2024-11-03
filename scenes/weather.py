@@ -59,13 +59,22 @@ TEMPERATURE_FONT = fonts.extrasmall
 TEMPERATURE_FONT_HEIGHT = 5
 TEMPERATURE_POSITION = (48, TEMPERATURE_FONT_HEIGHT + 1)
 
-TEMPERATURE_COLOURS = (
-    (0, colours.WHITE),
-    (1, colours.BLUE_LIGHT),
-    (8, colours.PINK_DARK),
-    (18, colours.YELLOW),
-    (30, colours.ORANGE),
-)
+if units == "imperial":
+        TEMPERATURE_COLOURS = (
+        (32, colours.WHITE),
+        (34, colours.BLUE_LIGHT),
+        (8, colours.PINK_DARK),
+        (18, colours.YELLOW),
+        (30, colours.ORANGE),
+        )
+else:
+        TEMPERATURE_COLOURS = (
+        (0, colours.WHITE),
+        (1, colours.BLUE_LIGHT),
+        (46, colours.PINK_DARK),
+        (64, colours.YELLOW),
+        (86, colours.ORANGE),
+        )
 
 # Cache grabbing weather data
 @lru_cache()
